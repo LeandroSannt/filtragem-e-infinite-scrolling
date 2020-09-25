@@ -4,10 +4,10 @@ const filterInput =document.querySelector("#filter")
 
 let page = 1
 
-const getPost = async()=>{
-const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=5&_page=${page}`)
-return response.json()
-}
+    const getPost = async()=>{
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=5&_page=${page}`)
+    return response.json()
+    }
 
 const addPostIntoDOM = async() =>{
     const post = await getPost()
@@ -24,6 +24,7 @@ const addPostIntoDOM = async() =>{
 }
 
 addPostIntoDOM()
+
 const getNextPosts =() =>{
     setTimeout (()=>{
         page++
